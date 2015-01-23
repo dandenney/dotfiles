@@ -14,3 +14,7 @@
 [core]
 
 	editor = subl -w
+
+[commit]
+
+  template = ~/.dotfiles/git/template
