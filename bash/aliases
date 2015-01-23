@@ -1,0 +1,62 @@
+alias al='subl ~/.dotfiles/bash/aliases'
+
+## ----- Bundle ----- ##
+
+alias be='bundle exec'
+
+## ----- Git ----- ##
+
+alias ga='git add'
+alias gap='git add -p'
+alias gb='git branch'
+alias gc='git commit -m'
+alias gca='git commit -a -m'
+alias gacv='git add . && git commit --verbose'
+alias gcv='git commit --verbose'
+alias gd='git diff'
+alias gfb='git checkout -b'
+alias gg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias ggo='git log --oneline --stat'
+alias ggs='git log'
+alias gh='git show'
+alias gl='git pull'
+alias glr='git pull --rebase'
+alias go='git checkout'
+alias gp='git push'
+alias gpo='git push origin'
+alias gpom='git push origin master'
+alias gpp='git pull --rebase && git push'
+alias gs='git status'
+alias gt='git tag'
+alias gui='git update-index --assume-unchanged'
+
+## ----- Jekyll ----- ##
+
+alias js='jekyll serve --no-watch'
+alias jb='jekyll build'
+
+## ----- Middleman ----- ##
+
+alias mb='middleman build'
+alias ms='bundle exec middleman s'
+
+## ----- MVCSS ----- ##
+
+alias m='mvcss'
+alias ma='mvcss all'
+alias mac='mvcss copy'
+alias maf='mvcss foundation'
+alias macf='mvcss copy foundation'
+alias maco='mvcss components'
+alias macco='mvcss copy components'
+alias ml='mvcss-library'
+alias mlc='mvcss-library copy'
+alias mlf='mvcss-library foundation'
+alias mlcf='mvcss-library copy foundation'
+alias mlco='mvcss-library components'
+alias mlcco='mvcss-library copy components'
+
+## ----- Rbenv ----- ##
+
+alias update_rbenv='cd $HOME/.rbenv && git pull && cd -'
+alias update_ruby_build='cd $HOME/.rbenv/plugins/ruby-build && git pull && cd -'

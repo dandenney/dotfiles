@@ -1,0 +1,16 @@
+[color]
+
+  ui = true
+
+[push]
+
+	default = simple
+
+[user]
+
+	email = dd.subscriptions@gmail.com
+	name = Dan Denney
+
+[core]
+
+	editor = subl -w
