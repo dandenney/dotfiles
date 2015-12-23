@@ -1,7 +1,36 @@
+# ****************************************************
+#
+#   Bash Profile
+#
+# ****************************************************
+
+# ----------------------------------------------------
+#   $PATH
+# ----------------------------------------------------
+
+PATH_DIRECTORIES=(
+  '/Applications/Postgres.app/Contents/Versions/9.3/bin'
+  '/usr/local/bin'
+  "$HOME/.rbenv/bin"
+  '/usr/bin'
+  '/bin'
+  '/usr/sbin'
+  '/sbin'
+  '/opt/X11/bin'
+  "$HOME/.dotfiles/bin"
+)
+
+export PATH=$( IFS=:; echo "${PATH_DIRECTORIES[*]}" )
+
+# ----------------------------------------------------
+#   Imports
+# ----------------------------------------------------
+
 source ~/.bash/aliases
 
-# putting rbenv in the load path
-export PATH="$HOME:/usr/local/bin:$HOME/.dotfiles/bin:$HOME/.rbenv/bin:$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin"
+# ----------------------------------------------------
+#   Config
+# ----------------------------------------------------
 
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
