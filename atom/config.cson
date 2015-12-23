@@ -7,6 +7,6 @@
   editor:
     invisibles: {}
     softWrap: true
-    fontSize: 15
+    fontSize: 16
   "tree-view":
     hideVcsIgnoredFiles: true
