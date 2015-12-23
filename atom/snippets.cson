@@ -1,0 +1,222 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+# DO THIS: Both of these will be loaded
+'.text.haml':
+
+  'Wrapper Table':
+    'prefix': 'wrap'
+    'body': """
+      -# =====================================
+      -#   Wrapper - Email
+      -# =====================================
+
+      %table{ tbl_reset, bgcolor: "\#{e.cBg}", width: "100%" }
+        %tr
+          %td{ align: 'center', style: 'padding: 40px 20px 48px 20px;' }
+    """
+
+  'Content Table':
+    'prefix': 'content'
+    'body': """
+      -# ====================================
+      -#   Content Container
+      -# ====================================
+
+      <!--[if (IE)|mso]>
+      <table align='center' border='0' cellpadding='0' cellspacing='0' width='600'>
+      <tr>
+      <td>
+      <![endif]-->
+
+      %table.flex-size{ tbl_reset, align: 'center', style: 'max-width: 600px;', width: '100%' }
+        -# Text
+        %tr
+          %td{ style: "color: \#{e.cText}; font-family: \#{e.tFamily}; font-size: 16px; line-height: 24px;" }
+
+            Content
+
+      <!--[if (IE)|mso]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    """
+
+  'Split Tables':
+    'prefix': 'split'
+    'body': """
+      -# ====================================
+      -#   Split Wrapper
+      -# ====================================
+
+      <!--[if (IE)|mso]>
+      <table align='center' border='0' cellpadding='0' cellspacing='0' width='600'>
+      <tr>
+      <td>
+      <![endif]-->
+
+      %table.flex-size{ tbl_reset, align: 'center', style: 'max-width: 600px;', width: '100%' }
+
+        %tr
+          %td{ style: 'font-size: 0; text-align: center;' }
+
+            %div{ style: "display: inline-block;" }
+              %table.content{ tbl_reset, align: 'left', width: '300' }
+                %tr
+                  %td{ align: 'left', style: "color: \#{e.cText}; font-family: \#{e.tFamily}; font-size: 16px; line-height: 24px;" }
+                    Column One
+
+            <!--[if mso]>
+            </td>
+            <td>
+            <![endif]-->
+
+            %div{ style: "display: inline-block;" }
+              %table.content{ tbl_reset, align: 'left', width: '300' }
+                %tr
+                  %td{ align: 'left', style: "color: \#{e.cText}; font-family: \#{e.tFamily}; font-size: 16px; line-height: 24px;" }
+                    Column Two
+
+      <!--[if (IE)|mso]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    """
+
+  'h1 row':
+    'prefix': 'h1'
+    'body': """
+      -# h1
+      %tr
+        %td.text.h1{ align: 'left', style: "color: \#{e.cTitle}; font-family: \#{e.tFamily}; font-size: 32px; font-weight: 300; line-height: 48px;" }
+
+          H1
+    """
+
+  'h2 row':
+    'prefix': 'h2'
+    'body': """
+      -# h2
+      %tr
+        %td.text.h2{ align: 'left', style: "color: \#{e.cTitle}; font-family: \#{e.tFamily}; font-size: 28px; font-weight: 300; line-height: 42px;" }
+
+          H2
+    """
+
+  'h3 row':
+    'prefix': 'h3'
+    'body': """
+      -# h3
+      %tr
+        %td.text.h3{ align: 'left', style: "color: \#{e.cTitle}; font-family: \#{e.tFamily}; font-size: 24px; font-weight: 300; line-height: 36px;" }
+
+          H3
+    """
+
+  'h4 row':
+    'prefix': 'h4'
+    'body': """
+      -# h4
+      %tr
+        %td.text.h4{ align: 'left', style: "color: \#{e.cTitle}; font-family: \#{e.tFamily}; font-size: 20px; font-weight: 300; line-height: 30px;" }
+
+          H4
+    """
+
+  'h5 row':
+    'prefix': 'h5'
+    'body': """
+      -# h5
+      %tr
+        %td.text.h5{ align: 'left', style: "color: \#{e.cTitle}; font-family: \#{e.tFamily}; font-size: 16px; font-weight: 300; line-height: 24px;" }
+
+          H5
+    """
+
+  'text row':
+    'prefix': 'text'
+    'body': """
+      -# Content
+      %tr
+        %td.text{ align: 'left', style: "color: \#{e.cText}; font-family: \#{e.tFamily}; font-size: 16px; line-height: 24px;" }
+
+          Text
+    """
+
+  'link':
+    'prefix': 'link'
+    'body': """
+      %a{ href: "#", style: "color: \#{e.cLink}; font-weight: 600;" } link
+    """
+
+  'btna row':
+    'prefix': 'btna'
+    'body': """
+      -# =====================================
+      -#   Button A
+      -# =====================================
+      %tr
+        %td{ align: 'center' }
+
+          -# =====================================
+          -#   Button A
+          -# =====================================
+          - btn_a_url = "#/\#{e.tracker}"
+
+          /[if mso]
+            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="\#{btn_a_url}" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="250%" stroke="f" fillcolor="#21abc7">
+            <w:anchorlock/>
+            <center>
+
+          %a.btn-a{:href => "\#{btn_a_url}", style: "background-color:#21abc7; border-radius:100px; color:#ffffff; display:inline-block; font-family: \#{e.tFamily}; font-size:12px; font-weight:bold; line-height:40px; text-align:center; text-decoration:none; width:200px;"} Text
+
+          /[if mso]
+            </center>
+            </v:roundrect>
+    """
+
+  'btnb row':
+    'prefix': 'btnb'
+    'body': """
+      -# =====================================
+      -#   Button B
+      -# =====================================
+      %tr
+        %td{ align: 'left' }
+
+          - btn_b_url = '#/\#{e.tracker}'
+
+          /[if mso]
+            <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="\#{btn_b_url}" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="250%" strokecolor="#21abc7" fillcolor="#21abc7">
+            <w:anchorlock/>
+            <center style="font-family: 'Open Sans', AppleSDGothicNeo-Medium, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600;">Button Text</center>
+            </v:roundrect>
+          %a.btn--b{ href: "\#{btn_b_url}" } btn--b
+    """
+
+  'padding helper':
+    'prefix': 'pt'
+    'body': """
+      padding-top: 16px;
+    """
