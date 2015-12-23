@@ -1,10 +1,14 @@
-alias al='subl ~/.dotfiles/bash/aliases'
+alias al='atom . ~/bash/aliases'
 
-## ----- Bundle ----- ##
+# ----------------------------------------------------
+#   Bundle
+# ----------------------------------------------------
 
 alias be='bundle exec'
 
-## ----- Git ----- ##
+# ----------------------------------------------------
+#   Git
+# ---------------------------------------------------
 
 alias ga='git add'
 alias gap='git add -p'
@@ -30,33 +34,29 @@ alias gs='git status'
 alias gt='git tag'
 alias gui='git update-index --assume-unchanged'
 
-## ----- Jekyll ----- ##
+# ----------------------------------------------------
+#   Middleman
+# ----------------------------------------------------
 
-alias js='jekyll serve --no-watch'
-alias jb='jekyll build'
+alias mmb='~/./bin/bundle exec middleman build'
+alias mms='~/./bin/bundle exec middleman s'
 
-## ----- Middleman ----- ##
+# ----------------------------------------------------
+#   POW
+# ----------------------------------------------------
 
-alias mb='middleman build'
-alias ms='bundle exec middleman s'
+alias pdo='powder open'
 
-## ----- MVCSS ----- ##
-
-alias m='mvcss'
-alias ma='mvcss all'
-alias mac='mvcss copy'
-alias maf='mvcss foundation'
-alias macf='mvcss copy foundation'
-alias maco='mvcss components'
-alias macco='mvcss copy components'
-alias ml='mvcss-library'
-alias mlc='mvcss-library copy'
-alias mlf='mvcss-library foundation'
-alias mlcf='mvcss-library copy foundation'
-alias mlco='mvcss-library components'
-alias mlcco='mvcss-library copy components'
-
-## ----- Rbenv ----- ##
+# ----------------------------------------------------
+#   Rbenv
+# ----------------------------------------------------
 
 alias update_rbenv='cd $HOME/.rbenv && git pull && cd -'
 alias update_ruby_build='cd $HOME/.rbenv/plugins/ruby-build && git pull && cd -'
+
+# ----------------------------------------------------
+#   Sublime
+# ----------------------------------------------------
+
+alias subl='~/./bin/subl'
+alias so='subl .'
