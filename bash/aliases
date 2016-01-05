@@ -38,8 +38,8 @@ alias gui='git update-index --assume-unchanged'
 #   Middleman
 # ----------------------------------------------------
 
-alias mmb='~/./bin/bundle exec middleman build'
-alias mms='~/./bin/bundle exec middleman s'
+alias mmb='bundle exec middleman build'
+alias mms='bundle exec middleman s'
 
 # ----------------------------------------------------
 #   POW
