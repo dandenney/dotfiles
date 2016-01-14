@@ -7,6 +7,13 @@ alias al='atom . ~/bash/aliases'
 alias be='bundle exec'
 
 # ----------------------------------------------------
+#   Code School
+# ----------------------------------------------------
+
+alias cs_dtp='saturn --production --application codeschool --deploy'
+alias cs_dts='saturn --staging --application codeschool --deploy'
+
+# ----------------------------------------------------
 #   Git
 # ---------------------------------------------------
 

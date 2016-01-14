@@ -3,10 +3,15 @@
     userId: "b6b7c161-cff2-bb2f-8167-f7c15e87cc2b"
   welcome:
     showOnStartup: false
-  core: {}
+  core:
+    themes: [
+      "one-dark-ui"
+      "duotone-dark-sea-syntax"
+    ]
   editor:
     invisibles: {}
     softWrap: true
     fontSize: 16
   "tree-view":
     hideVcsIgnoredFiles: true
+  "one-dark-ui": {}
