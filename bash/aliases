@@ -34,12 +34,16 @@ alias gl='git pull'
 alias glr='git pull --rebase'
 alias go='git checkout'
 alias gp='git push'
+alias gpfwl='git push --force-with-lease'
 alias gpo='git push origin'
 alias gpom='git push origin master'
 alias gpp='git pull --rebase && git push'
 alias gs='git status'
 alias gt='git tag'
 alias gui='git update-index --assume-unchanged'
+alias bringthepain='git pull --rebase origin master'
+alias gitfuck='git reset HEAD~'
+alias stash='ga . && git stash'
 
 # ----------------------------------------------------
 #   Middleman
